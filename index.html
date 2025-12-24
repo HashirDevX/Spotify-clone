@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="cornflowerblue" />
+    <link rel="shortcut icon" href=".\img\favicon.ico" type="image/x-icon">
+    <title>Spotify | Free Music Player</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-brands fa-spotify"></i> Spotify
+        </div>
+
+        <nav class="nav">
+          <ul>
+            <li class="active"><i class="fa-solid fa-house"></i> Home</li>
+            <li><i class="fa-solid fa-magnifying-glass"></i> Search</li>
+            <li><i class="fa-solid fa-book"></i> Library</li>
+          </ul>
+        </nav>
+
+        <div class="playlists">
+          <div class="playlist-header">
+            <h4>YOUR PLAYLISTS</h4>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <ul>
+            <li>
+              <div class="icon-box"><i class="fa-solid fa-heart"></i></div>
+              Liked Songs
+            </li>
+            <li>Chill Hits</li>
+            <li>Top 50 - Global</li>
+            <li>Coding Mode</li>
+            <li>Late Night Lo-Fi</li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header>
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              id="search"
+              placeholder="What do you want to play?"
+            />
+          </div>
+          <div class="user-profile">
+            <div class="avatar"><i class="fa-solid fa-user"></i></div>
+          </div>
+        </header>
+
+        <div class="content-scroll">
+          <h2>Good Evening</h2>
+
+          <!-- <div class="library-grid">
+            <div class="card">
+              <img src="https://picsum.photos/200/200?random=1" alt="Mix" />
+              <h3>Daily Mix 1</h3>
+              <p>Imagine Dragons, Dua Lipa...</p>
+              <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <div class="card">
+              <img src="https://picsum.photos/200/200?random=2" alt="Mix" />
+              <h3>Top Hits</h3>
+              <p>The hottest tracks right now.</p>
+              <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <div class="card">
+              <img src="https://picsum.photos/200/200?random=3" alt="Mix" />
+              <h3>Discover</h3>
+              <p>New music for you.</p>
+              <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <div class="card">
+              <img src="https://picsum.photos/200/200?random=4" alt="Mix" />
+              <h3>Chill</h3>
+              <p>Relax and unwind.</p>
+              <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+            </div>
+          </div> -->
+
+          <div class="library"></div>
+        </div>
+      </main>
+    </div>
+
+    <div class="player">
+      <div class="track-info">
+        <img
+          id="album-art"
+          src="https://picsum.photos/60/60?random=10"
+          alt="Album Art"
+        />
+        <div class="text-details">
+          <div id="title">Song Title</div>
+          <div id="artist">Artist Name</div>
+        </div>
+        <i class="fa-regular fa-heart like-icon"></i>
+      </div>
+
+      <div class="player-controls">
+        <div class="buttons">
+          <button class="shuffle"><i class="fa-solid fa-shuffle"></i></button>
+          <button id="prev"><i class="fa-solid fa-backward-step"></i></button>
+          <button id="play" class="main-play">
+            <i class="fa-solid fa-circle-play"></i>
+          </button>
+          <button id="next"><i class="fa-solid fa-forward-step"></i></button>
+          <button class="loop"><i class="fa-solid fa-repeat"></i></button>
+        </div>
+
+        <div class="seek-bar">
+          <span id="current-time">0:45</span>
+          <input type="range" id="seek" value="30" min="0" max="100" />
+          <span id="duration">3:12</span>
+        </div>
+      </div>
+
+      <div class="volume-controls">
+        <i class="fa-solid fa-volume-high"></i>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+        <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
